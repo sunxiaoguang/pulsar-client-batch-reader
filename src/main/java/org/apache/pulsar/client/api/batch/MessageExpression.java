@@ -31,6 +31,10 @@ public interface MessageExpression<T> {
         return null;
     }
 
+    static <T> MessageExpression earliest() { return null; }
+
+    static <T> MessageExpression latest() { return null; }
+
     /**
      * Message expression builder to specify reference to message
      */

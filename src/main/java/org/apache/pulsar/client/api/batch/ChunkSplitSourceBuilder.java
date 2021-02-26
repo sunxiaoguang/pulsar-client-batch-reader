@@ -24,7 +24,6 @@ import org.apache.pulsar.common.classification.InterfaceStability;
 
 import java.io.Serializable;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -124,6 +123,6 @@ public interface ChunkSplitSourceBuilder<T> extends Cloneable {
      *            expression to specify the end message exclusively
      * @return the chunk split source builder instance
      */
-    ChunkSplitSourceBuilder<T> range(Optional<MessageExpression<T>> begin,
-                                     Optional<MessageExpression<T>> end);
+    ChunkSplitSourceBuilder<T> range(MessageExpression<T> begin,
+                                     MessageExpression<T> end);
 }
