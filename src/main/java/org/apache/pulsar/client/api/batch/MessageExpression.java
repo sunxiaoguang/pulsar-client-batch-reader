@@ -89,14 +89,6 @@ public interface MessageExpression<T> {
         ExprBuilder<T> equals(String rhs);
 
         /**
-         * Create not equals expression builder
-         *
-         * @param rhs operand
-         * @return expression builder
-         */
-        ExprBuilder<T> notEquals(String rhs);
-
-        /**
          * Create in expression builder
          *
          * @param arg1   operand 1
@@ -105,16 +97,6 @@ public interface MessageExpression<T> {
          * @return expression builder
          */
         ExprBuilder<T> in(String arg1, String arg2, String... others);
-
-        /**
-         * Create not in expression builder
-         *
-         * @param arg1   operand 1
-         * @param arg2   operand 2
-         * @param others other operands
-         * @return expression builder
-         */
-        ExprBuilder<T> notIn(String arg1, String arg2, String... others);
 
         /**
          * Create greater than expression builder
@@ -157,42 +139,11 @@ public interface MessageExpression<T> {
         ExprBuilder<T> like(String rhs);
 
         /**
-         * Create not like expression builder
+         * Create is null expression builder
          *
-         * @param rhs operand
          * @return expression builder
          */
-        ExprBuilder<T> notLike(String rhs);
-
-        /**
-         * Create contains all expression builder
-         *
-         * @param arg1   operand 1
-         * @param arg2   operand 2
-         * @param others other operands
-         * @return expression builder
-         */
-        ExprBuilder<T> containsAll(String arg1, String arg2, String... others);
-
-        /**
-         * Create contains any expression builder
-         *
-         * @param arg1   operand 1
-         * @param arg2   operand 2
-         * @param others other operands
-         * @return expression builder
-         */
-        ExprBuilder<T> containsAny(String arg1, String arg2, String... others);
-
-        /**
-         * Create contains none expression builder
-         *
-         * @param arg1   operand 1
-         * @param arg2   operand 2
-         * @param others other operands
-         * @return expression builder
-         */
-        ExprBuilder<T> containsNone(String arg1, String arg2, String... others);
+        ExprBuilder<T> isNull();
 
         /**
          * Create between none expression builder
@@ -212,14 +163,6 @@ public interface MessageExpression<T> {
         ExprBuilder<T> equals(Long rhs);
 
         /**
-         * Create not equals expression builder
-         *
-         * @param rhs operand
-         * @return expression builder
-         */
-        ExprBuilder<T> notEquals(Long rhs);
-
-        /**
          * Create in expression builder
          *
          * @param arg1   operand 1
@@ -228,16 +171,6 @@ public interface MessageExpression<T> {
          * @return expression builder
          */
         ExprBuilder<T> in(Long arg1, Long arg2, Long... others);
-
-        /**
-         * Create not in expression builder
-         *
-         * @param arg1   operand 1
-         * @param arg2   operand 2
-         * @param others other operands
-         * @return expression builder
-         */
-        ExprBuilder<T> notIn(Long arg1, Long arg2, Long... others);
 
         /**
          * Create greater than expression builder
@@ -289,14 +222,6 @@ public interface MessageExpression<T> {
         ExprBuilder<T> equals(Double rhs);
 
         /**
-         * Create not equals expression builder
-         *
-         * @param rhs operand
-         * @return expression builder
-         */
-        ExprBuilder<T> notEquals(Double rhs);
-
-        /**
          * Create in expression builder
          *
          * @param arg1   operand 1
@@ -305,16 +230,6 @@ public interface MessageExpression<T> {
          * @return expression builder
          */
         ExprBuilder<T> in(Double arg1, Double arg2, Double... others);
-
-        /**
-         * Create not in expression builder
-         *
-         * @param arg1   operand 1
-         * @param arg2   operand 2
-         * @param others other operands
-         * @return expression builder
-         */
-        ExprBuilder<T> notIn(Double arg1, Double arg2, Double... others);
 
         /**
          * Create greater than expression builder
